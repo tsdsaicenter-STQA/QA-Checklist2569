@@ -2212,12 +2212,12 @@ function exportTxt() {
 // ═══════════════════════════════════════════════════════════════
 
 // ← ใส่ URL จาก Apps Script ที่นี่
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxtz1PH2kSA8Fwl-uPTPzOIvRRJ2pad3pCspHG57XBwDQxsBw_mwtdimIjlZihETTDHdQ/exec";
+const APPS_SCRIPT_URL = "YOUR_APPS_SCRIPT_URL_HERE";
 
 const STD_NAMES_TH = {1:"การจัดหลักสูตร",2:"ผู้รับการฝึก",3:"ครูฝึก",4:"วิธีการฝึก",5:"สถานที่และสภาพแวดล้อม",7:"การประชาสัมพันธ์"};
 
 function isConfigured() {
-  return APPS_SCRIPT_URL && APPS_SCRIPT_URL !== "YOUR_APPS_SCRIPT_URL_HERE";
+  return APPS_SCRIPT_URL && APPS_SCRIPT_URL !== "https://script.google.com/macros/s/AKfycbxtz1PH2kSA8Fwl-uPTPzOIvRRJ2pad3pCspHG57XBwDQxsBw_mwtdimIjlZihETTDHdQ/exec";
 }
 
 // ── บันทึกมาตรฐานเดียวไป Sheets ──────────────────────────────
