@@ -1893,7 +1893,9 @@ function renderDashboard() {
       const sess = sessions[`${t}-${u}`];
       STDS.forEach(std=>{
         const rows = getRows(t,std);
-        const hasStdData = rows.some(r=>{
+        // ถือว่ามีข้อมูลถ้า: กรอกในเครื่อง หรือ โหลดมาจาก Sheets (_sheetCounts)
+        const hasStdFromSheet = sess._sheetCounts && sess._sheetCounts[std];
+        const hasStdData = hasStdFromSheet || rows.some(r=>{
           const a=sess.answers[r.id]||{};
           return a.yn||a.have||a.remark;
         });
